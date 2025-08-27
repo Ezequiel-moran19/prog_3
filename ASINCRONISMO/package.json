@@ -1,0 +1,28 @@
+{
+  "name": "asincronismo",
+  "version": "1.0.0",
+  "description": "Aprendiendo Asincronismo en JavasCript",
+  "main": "index.js",
+  "scripts": {
+    "callback": "node src/callback/index.js",
+    "callback:api": "node src/callback/api.js",
+    "promise": "node src/promise/index.js",
+    "promise:api": "node src/promise/api.js",
+    "async": "node src/async/index.js",
+    "async:api": "node src/async/api.js",
+    "fetch": "node src/fetch/index.js",
+    "fetch:api": "node src/fetch/fetch.js"
+  },
+  "keywords": [
+    "callback",
+    "promise",
+    "async",
+    "await"
+  ],
+  "author": "Ezequiel Moran",
+  "license": "ISC",
+  "dependencies": {
+    "node-fetch": "^3.3.2",
+    "xmlhttprequest": "^1.8.0"
+  }
+}

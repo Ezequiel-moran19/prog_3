@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+    <title>Document</title>
+</head>
+<body>
+
+    <main>
+        <section>
+            <form>
+                <section class="lista-persona">
+                <h2>Form Datos</h2>
+                <label for="tipo">Filtrar por:</label>
+                <select id="tipo" name="tipo">
+                    <option value="">--Todos--</option>
+                    <option value="Aereo">Aéreo</option>
+                    <option value="Terrestre">Terrestre</option>
+                </select>
+                <br>
+                    <div class="card shadow-lg p-4">
+                        <main class="promedio">
+                            <p class="mb-4 text-center text-primary">Promedio Velocidad Maxima</p>
+                            <input type="search" id="searchInput" class="form-control mb-3" placeholder="Calcular"> 
+                            <input type="button" id="btnaCalcular" value="Calcular"> 
+                            <div id="idTabla"></div>
+                        </main>
+                    </div>  
+                    <div id="idTabla"></div>
+                <input type="submit" id="btnSubmit" value="Agregar">
+             </section>
+            </form>
+
+        </section>       
+
+        <section>
+            <h2>Form ABM</h2>
+            <form id="form-abm">
+                <label for="txtId">ID:</label>
+                <input type="text" id="txtId" name="txtId" autocomplete="off" disabled>
+                <br>
+
+
+                <label for="txtModelo">Modelo:</label>
+                <input type="text" id="txtModelo" name="txtModelo" autocomplete="off">
+                <br>
+
+                <label for="txtAnoFab">Año Fabricación:</label>
+                <input type="date" id="txtAnoFab" name="txtAnoFab" autocomplete="off">
+                <br>
+
+                <label for="txtVelMax">Velocidad Máxima:</label>
+                <input type="number" id="txtVelMax" name="txtVelMax" autocomplete="off">
+                <br>
+
+                <label for="tipo">Tipo:</label>
+                <select id="tipo" name="tipo">
+                    <option value="">--Seleccionar--</option>
+                    <option value="Aereo">Aéreo</option>
+                    <option value="Terrestre">Terrestre</option>
+                </select>
+                <br>
+
+                <!-- Campos adicionales -->
+                <label for="txtAltMax">Altura Máxima:</label>
+                <input type="number" id="txtAltMax" name="txtAltMax" autocomplete="off">
+                <br>
+
+                <label for="txtAutonomia">Autonomía:</label>
+                <input type="number" id="txtAutonomia" name="txtAutonomia" autocomplete="off">
+                <br>
+
+                <label for="txtCantPue">Cantidad Puertas:</label>
+                <input type="number" id="txtCantPue" name="txtCantPue" autocomplete="off">
+                <br>
+
+                <label for="txtCantRue">Cantidad Ruedas:</label>
+                <input type="number" id="txtCantRue" name="txtCantRue" autocomplete="off">
+                <br>
+
+                <div id="campos-dinamicos">
+                    <!-- Aquí se muestran los campos según tipo -->
+                </div>
+
+                <br>
+                <input type="submit" value="Agregar">
+                <input type="button" id="btnModificar" value="Modificar">
+                <input type="button" id="btnEliminar" value="Eliminar">
+                <input type="button" id="btnCancelar" value="Cancelar">
+            </form>
+
+            <section class="lista-vehiculos">
+            </section>
+        </section>
+
+  
+    </main>
+   
+
+
+    <script type="module" src="./app.js"></script>
+</body> 
+</html>
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>

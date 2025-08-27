@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="app.css">
+    <title>Tabla Dinamica</title>
+</head>
+<body>
+    
+    <header>
+        <h1>CRUD Personas</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Alta Persona</h2>
+            <br>
+            <form>
+                <input 
+                type="text"
+                name="txtNombre"
+                placeholder="Nombre"
+                autocomplete="off">
+                <br>
+                <input 
+                type="number"
+                name="txtEdad"
+                placeholder="Edad"
+                autocomplete="off"
+                min="18" max=66">
+                <br>
+                <input 
+                type="email"
+                name="txtEmail"
+                placeholder="Email"
+                autocomplete="off">
+                <br>
+                <fieldset>
+                    <legend>GENERO</legend>
+                    <input type="radio" name="rdoGenero" value="Masculino" checked>Masculino
+                    <br>
+                    <input type="radio" name="rdoGenero" value="Femenino">Femenino
+                    <br>
+                </fieldset>
+                <input type="submit" id="btnSubmit" value="Enviar">
+                <input type="button" value="Eliminar" id="btnEliminar">
+                <input type="button" id="btnCancelar" value="Cancelar">
+                <input type="hidden" name="txtId">
+
+            </form>
+        </section>
+
+        <section class="lista-persona">
+            <h2>Listado de Persona</h2>
+            
+            <div id="idTabla"></div>
+        </section>
+    </main>
+   
+    <script type="module" src="app.js"></script>
+</body>
+</html>
