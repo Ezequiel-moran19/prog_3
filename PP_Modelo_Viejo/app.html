@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./tabla.css">
+  <title>Document</title>
+</head>
+<body>
+  <section class="container">
+    <h1>Form Datos</h1>
+
+    <div class="filtro">
+      <h3>Filtrado por: </h3>
+      <select id="idOpciones" name="Filtrar por:">
+        <option value="Todos">Todos</option>
+        <option value="Terrestre">Terrestre</option>
+        <option value="Aereo">Aereo</option>
+      </select>
+    </div>
+
+    <div id="chkContainer"></div> <!-- checkboxes dinámicos -->
+
+    <div class="cont_res" id="resultadoContainer">
+      <button id="btnCalcular">Calcular</button>
+      <input id="inputPromedio" readonly style="width:100px; text-align:center;">
+    </div>
+
+    <div id="idTabla"></div> <!-- tabla dinámica -->
+
+    <!-- Botón para abrir ABM -->
+    <button id="btnAgregar" type="button">Agregar Vehiculo</button>
+  </section>
+
+  <!-- FORM ABM -->
+  <section class="cont_abm" style="display:none;">
+
+
+    <form id="form-abm">
+      <header>
+        <h1>CRUD Vehiculo</h1>
+      </header>
+      <label for="txtId">ID:</label>
+      <input type="text" id="txtId" name="txtId" disabled>
+      <br>
+
+      <label for="txtModelo">Modelo:</label>
+      <input type="text" id="txtModelo" name="txtModelo">
+      <br>
+
+      <label for="txtAnoFab">Año Fabricación:</label>
+      <input type="number" id="txtAnoFab" name="txtAnoFab">
+      <br>
+
+      <label for="txtVelMax">Velocidad Máxima:</label>
+      <input type="number" id="txtVelMax" name="txtVelMax">
+      <br>
+
+      <label for="tipo">Tipo:</label>
+      <select id="tipo" name="tipo">
+        <option value="">--Seleccionar--</option>
+        <option value="Aereo">Aéreo</option>
+        <option value="Terrestre">Terrestre</option>
+      </select>
+      <br>
+
+      <!-- Campos adicionales según tipo -->
+      <label for="txtAltMax">Altura Máxima:</label>
+      <input type="number" id="txtAltMax" name="txtAltMax">
+      <br>
+
+      <label for="txtAutonomia">Autonomía:</label>
+      <input type="number" id="txtAutonomia" name="txtAutonomia">
+      <br>
+
+      <label for="txtCantPue">Cantidad Puertas:</label>
+      <input type="number" id="txtCantPue" name="txtCantPue">
+      <br>
+
+      <label for="txtCantRue">Cantidad Ruedas:</label>
+      <input type="number" id="txtCantRue" name="txtCantRue">
+      <br>
+
+      <div class="btn">
+        <button type="submit" id="btnSubmit">Enviar</button>
+        <button type="button" id="btnEliminar">Eliminar</button>
+        <button type="button" id="btnCancelar">Cancelar</button>
+      </div>
+
+      <div id="idTablaAbm"></div> <!-- Tabla dinámica ABM -->
+    </form>
+  </section>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
